@@ -18,10 +18,10 @@
   <body>
     <div class="main-container">
       <div class="banner-section">
-        <div class="banner-image mobile-off">
+        <div class="banner-image">
           <div class="top-header">
             <div class="logo">
-              <img src="./assets/image/logo.png" width="300" alt="" />
+              <img src="./assets/image/logo.png" alt="" />
               <h6>Find Purpose-driven jobs everywhere</h6>
             </div>
             <h6 class="poweredby">Powered By <b>Devcurate</b></h6>
@@ -36,11 +36,12 @@
         </div>
         <div class="signup-highlight">
           <h2>Get personalised jobs and directly reffered to recruiters</h2>
-          <button type="button" class="yellow-btn search-btn">Sign up</button>
+          <button type="button" class="yellow-btn">Sign up</button>
         </div>
       </div>
 
       <div class="job-section">
+        <!-- filter file -->
         <div class="filter-container filter-card mobile-off">
           <div class="filter-header">
             <h1>Job Filter</h1>
@@ -163,7 +164,9 @@
             </div>
           </div>
         </div>
+        <!-- filter file ends -->
         <div class="job-list-container">
+          <!-- Search card -->
           <div class="search-card">
             <h1 class="search-header">Search Jobs</h1>
             <div class="search-bar">
@@ -178,16 +181,18 @@
               <button type="button" class="primary-btn search-btn">
                 Search
               </button>
-              <button type="button" class="secondary-btn search-btn desktop-off">
+              <button type="button" class="secondary-btn desktop-off">
                 Filter
               </button>
             </div>
           </div>
+          <!-- Search card ends -->
 
+          <!-- job card -->
           <div class="job-card">
             <div class="job-content">
               <div class="job-heading">
-                <img src="assets/image/org-logo.svg" alt="" />
+                <img class="org-image" src="assets/image/org-logo.svg" alt="" />
                 <div class="job-header">
                   <div class="job-title">
                     <h1 class="job-position">Junior UI/UX Designer</h1>
@@ -204,49 +209,100 @@
                     <div class="chip job-chip">0-2 Years</div>
                     <div class="chip job-chip">Bachelor Degree</div>
                   </div>
-                </div>
-              </div>
-              <div class="job-details">
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">30 Sept, 2022</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Brussels</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Bachelor Degree</h3>
+                  <div class="job-details">
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">30 Sept, 2022</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Brussels</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Bachelor Degree</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="job-action">
-              <button type="button" class="primary-btn search-btn">
-                Apply
-              </button>
-              <button type="button" class="secondary-btn search-btn">
-                Save
-              </button>
+              <button type="button" class="primary-btn apply-btn">Apply</button>
+              <button type="button" class="secondary-btn save-btn">Save</button>
+            </div>
+          </div>
+          <!-- job cards end -->
+          <div class="job-card">
+            <div class="job-content">
+              <div class="job-heading">
+                <img class="org-image" src="assets/image/org-logo.svg" alt="" />
+                <div class="job-header">
+                  <div class="job-title">
+                    <h1 class="job-position">Junior UI/UX Designer</h1>
+                    <div class="job-highlights">
+                      <div class="chip job-chip-new">New</div>
+                      <div class="chip job-chip-remote">Remote</div>
+                    </div>
+                  </div>
+                  <h6 class="job-org">
+                    Handicap International - Humanity & Inclusion
+                  </h6>
+                  <div class="job-highlights">
+                    <div class="chip job-chip">Fixed-Term/Staff</div>
+                    <div class="chip job-chip">0-2 Years</div>
+                    <div class="chip job-chip">Bachelor Degree</div>
+                  </div>
+                  <div class="job-details">
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">30 Sept, 2022</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Brussels</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Bachelor Degree</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="job-action">
+              <button type="button" class="primary-btn apply-btn">Apply</button>
+              <button type="button" class="secondary-btn save-btn">Save</button>
             </div>
           </div>
 
           <div class="job-card">
             <div class="job-content">
               <div class="job-heading">
-                <img src="assets/image/org-logo.svg" alt="" />
+                <img class="org-image" src="assets/image/org-logo.svg" alt="" />
                 <div class="job-header">
                   <div class="job-title">
                     <h1 class="job-position">Junior UI/UX Designer</h1>
@@ -263,112 +319,50 @@
                     <div class="chip job-chip">0-2 Years</div>
                     <div class="chip job-chip">Bachelor Degree</div>
                   </div>
-                </div>
-              </div>
-              <div class="job-details">
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">30 Sept, 2022</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Brussels</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Bachelor Degree</h3>
-                </div>
-              </div>
-            </div>
-            <div class="job-action">
-              <button type="button" class="primary-btn search-btn">
-                Apply
-              </button>
-              <button type="button" class="secondary-btn search-btn">
-                Save
-              </button>
-            </div>
-          </div>
-
-          <div class="job-card">
-            <div class="job-content">
-              <div class="job-heading">
-                <img src="assets/image/org-logo.svg" alt="" />
-                <div class="job-header">
-                  <div class="job-title">
-                    <h1 class="job-position">Junior UI/UX Designer</h1>
-                    <div class="job-highlights">
-                      <div class="chip job-chip-new">New</div>
-                      <div class="chip job-chip-remote">Remote</div>
+                  <div class="job-details">
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">30 Sept, 2022</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Brussels</h3>
+                    </div>
+                    <div class="job-main-details">
+                      <img
+                        src="assets/image/loupe.svg"
+                        class="detail-icon"
+                        alt=""
+                      />
+                      <h3 class="detail-text">Bachelor Degree</h3>
                     </div>
                   </div>
-                  <h6 class="job-org">
-                    Handicap International - Humanity & Inclusion
-                  </h6>
-                  <div class="job-highlights">
-                    <div class="chip job-chip">Fixed-Term/Staff</div>
-                    <div class="chip job-chip">0-2 Years</div>
-                    <div class="chip job-chip">Bachelor Degree</div>
-                  </div>
-                </div>
-              </div>
-              <div class="job-details">
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">30 Sept, 2022</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Brussels</h3>
-                </div>
-                <div class="job-main-details">
-                  <img
-                    src="assets/image/loupe.svg"
-                    class="detail-icon"
-                    alt=""
-                  />
-                  <h3 class="detail-text">Bachelor Degree</h3>
                 </div>
               </div>
             </div>
             <div class="job-action">
-              <button type="button" class="primary-btn search-btn">
-                Apply
-              </button>
-              <button type="button" class="secondary-btn search-btn">
-                Save
-              </button>
+              <button type="button" class="primary-btn apply-btn">Apply</button>
+              <button type="button" class="secondary-btn save-btn">Save</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- job-details popup -->
     <div id="popup1" class="overlay">
       <div class="popup">
         <div class="job-content popup-job-details">
           <div class="popup-top-content">
-            <div class="popup-job-action">
+            <div class="popup-job-action desktop-off">
               <img src="assets/image/export.svg" alt="export" width="32" />
               <img src="assets/image/copy.svg" alt="copy" width="32" />
               <img src="assets/image/facebook.svg" alt="facebook" width="32" />
@@ -381,7 +375,7 @@
               />
             </div>
             <div class="job-heading">
-              <img src="assets/image/org-logo.svg" alt="" />
+              <img class="org-image" src="assets/image/org-logo.svg" alt="" />
               <div class="job-header">
                 <div class="job-title">
                   <h1 class="job-position">Junior UI/UX Designer</h1>
@@ -398,6 +392,32 @@
                   <div class="chip job-chip">0-2 Years</div>
                   <div class="chip job-chip">Bachelor Degree</div>
                 </div>
+                <div class="job-details">
+                  <div class="job-main-details">
+                    <img
+                      src="assets/image/loupe.svg"
+                      class="detail-icon"
+                      alt=""
+                    />
+                    <h3 class="detail-text">30 Sept, 2022</h3>
+                  </div>
+                  <div class="job-main-details">
+                    <img
+                      src="assets/image/loupe.svg"
+                      class="detail-icon"
+                      alt=""
+                    />
+                    <h3 class="detail-text">Brussels</h3>
+                  </div>
+                  <div class="job-main-details">
+                    <img
+                      src="assets/image/loupe.svg"
+                      class="detail-icon"
+                      alt=""
+                    />
+                    <h3 class="detail-text">Bachelor Degree</h3>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="popup-job-action mobile-off">
@@ -411,20 +431,6 @@
                 alt="cancel"
                 width="32"
               />
-            </div>
-          </div>
-          <div class="job-details">
-            <div class="job-main-details">
-              <img src="assets/image/loupe.svg" class="detail-icon" alt="" />
-              <h3 class="detail-text">30 Sept, 2022</h3>
-            </div>
-            <div class="job-main-details">
-              <img src="assets/image/loupe.svg" class="detail-icon" alt="" />
-              <h3 class="detail-text">Brussels</h3>
-            </div>
-            <div class="job-main-details">
-              <img src="assets/image/loupe.svg" class="detail-icon" alt="" />
-              <h3 class="detail-text">Bachelor Degree</h3>
             </div>
           </div>
         </div>
@@ -457,16 +463,18 @@
           </span>
         </div>
         <div class="popup-action">
-          <button type="button" class="primary-btn search-btn">Apply</button>
-          <button type="button" class="secondary-btn search-btn">Save</button>
+          <button type="button" class="primary-btn apply-btn">Apply</button>
+          <button type="button" class="secondary-btn save-btn">Save</button>
         </div>
       </div>
     </div>
+    <!-- job details popup ends -->
 
+    <!-- signup-popup -->
     <div id="popup2" class="overlay">
       <div class="popup">
         <div class="signup-popup">
-          <!-- <div class="info-content">
+          <div class="info-content">
             <div class="info-icon">
               <img src="assets/image/info.svg" width="100" alt="info" />
             </div>
@@ -484,7 +492,11 @@
             <button type="button" class="primary-btn interested-btn">
               OK, I am interested
             </button>
-          </div> -->
+            <h5 style="text-align: center; margin-top: 15px;">
+              Click "Ok I am interested" to agree to Devcurate's Term and Service and acknowledge that
+              Devcurate's Privacy Policy applies to you 
+            </h5>
+          </div>
 
           <!-- <div class="account-form">
             <h2>CREATE A FREE ORG ACCOUNT</h2>
@@ -519,7 +531,7 @@
             </button>
           </div> -->
 
-          <div class="success-content">
+          <!-- <div class="success-content">
             <div class="success-icon">
               <img src="assets/image/correct.svg" width="100" alt="info" />
             </div>
@@ -535,24 +547,26 @@
               Login with the email and password you used just now to create an
               account when redirected to the dashboard!
             </h5>
-          </div>
+          </div> -->
           <div class="signup-banner mobile-off">
             <img src="assets/image/signup-banner.svg" width="100%" alt="" />
           </div>
         </div>
       </div>
     </div>
+    <!-- signup-popup ends -->
 
+    <!-- filter-popup -->
     <div id="popup3" class="overlay">
       <div class="popup">
-            <div class="popup-job-action">
-              <img
-                src="assets/image/cancel.svg"
-                style="margin-left: 260px"
-                alt="cancel"
-                width="32"
-              />
-          </div>
+        <div class="popup-job-action">
+          <img
+            src="assets/image/cancel.svg"
+            style="margin-left: 260px"
+            alt="cancel"
+            width="32"
+          />
+        </div>
         <!-- <a class="close" href="#">&times;</a> -->
         <div class="content">
           <div class="filter-container">
@@ -560,7 +574,7 @@
               <h1>Job Filter</h1>
               <span>Clear All</span>
             </div>
-  
+
             <div class="filter-category">
               <div class="filter-type-heading">
                 <h4>Experience Level</h4>
@@ -572,13 +586,13 @@
                   <input type="checkbox" checked="checked" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >3-4 Years
                   <input type="checkbox" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >5-7 Years
                   <input type="checkbox" />
@@ -586,7 +600,7 @@
                 </label>
               </div>
             </div>
-  
+
             <div class="filter-category">
               <div class="filter-type-heading">
                 <h4>Contract Type</h4>
@@ -598,13 +612,13 @@
                   <input type="checkbox" checked="checked" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >Contract job
                   <input type="checkbox" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >Full Time
                   <input type="checkbox" />
@@ -612,7 +626,7 @@
                 </label>
               </div>
             </div>
-  
+
             <div class="filter-category">
               <div class="filter-type-heading">
                 <h4>Job Function</h4>
@@ -624,13 +638,13 @@
                   <input type="checkbox" checked="checked" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >Accounting
                   <input type="checkbox" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >Communications
                   <input type="checkbox" />
@@ -638,7 +652,7 @@
                 </label>
               </div>
             </div>
-  
+
             <div class="filter-category">
               <div class="filter-type-heading">
                 <h4>Location</h4>
@@ -650,23 +664,23 @@
                   <input type="checkbox" checked="checked" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >North America
                   <input type="checkbox" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <label class="container"
                   >Australia
                   <input type="checkbox" />
                   <span class="checkmark"></span>
                 </label>
-  
+
                 <h5>See more</h5>
               </div>
             </div>
-  
+
             <div class="filter-category">
               <div class="filter-type-heading">
                 <h4>Remote Work</h4>
@@ -679,11 +693,10 @@
           </div>
         </div>
         <div class="popup-action">
-          <button type="button" class="primary-btn search-btn">Apply</button>
+          <button type="button" class="primary-btn">Apply</button>
         </div>
       </div>
-
-      </div>
     </div>
+    <!-- filter popup ends -->
   </body>
 </html>

@@ -23,7 +23,194 @@ span {
   padding: 0;
   margin: 0;
 }
+/* --------- Check box -------- */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default checkbox */
+.container input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid #3a2b1d;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #f6c343;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* --------- Check box end -------- */
+
+/* --------- Switch css ------------ */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f6c343;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f6c343;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --------- Switch css ends ------------ */
+
+/* ---------- Pop up ------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 15px;
+  width: 70%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+/* ---------- popup css ends ------------ */
+
+/* Buttons */
 .primary-btn {
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
     0 1px 5px 0 rgb(0 0 0 / 12%);
@@ -99,6 +286,8 @@ span {
   transform: scale(0.98);
 }
 
+/* Banner section */
+
 .banner-image {
   background: url(../image/background-image-long.svg);
   width: 100%;
@@ -112,6 +301,10 @@ span {
   display: flex;
   justify-content: space-between;
   padding: 30px 120px;
+}
+
+.logo img {
+  width: 300px;
 }
 
 .logo h6 {
@@ -131,13 +324,13 @@ span {
 .content-header {
   font-size: 62px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .content-details {
   font-size: 24px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .signup-highlight {
@@ -209,134 +402,6 @@ span {
 
 .filter-selections {
   margin-left: 15px;
-}
-
-.container {
-  display: block;
-  position: relative;
-  padding-left: 50px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-size: 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.container input {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #ffffff;
-  border: 1px solid #3a2b1d;
-  border-radius: 5px;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #f6c343;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 8px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #f6c343;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #f6c343;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 /* Job list Container */
@@ -415,6 +480,7 @@ input:checked + .slider:before {
 
 .job-title {
   display: flex;
+  margin: 0 5px;
 }
 
 .job-position {
@@ -438,7 +504,7 @@ input:checked + .slider:before {
 .job-org {
   font-weight: 400;
   font-size: 16px;
-  margin: 10px 0;
+  margin: 10px 5px;
 }
 
 .job-highlights {
@@ -459,13 +525,14 @@ input:checked + .slider:before {
 .job-details {
   display: flex;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .job-main-details {
   display: flex;
   align-items: center;
   font-weight: 500;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .detail-icon {
@@ -484,57 +551,12 @@ input:checked + .slider:before {
   justify-content: space-around;
 }
 
-/* Pop up */
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+.apply-btn {
+  margin-right: 5px;
 }
 
-.popup {
-  margin: 70px auto;
-  padding: 50px;
-  background: #fff;
-  border-radius: 15px;
-  width: 70%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06d85f;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
+.save-btn {
+  margin-left: 5px;
 }
 
 .popup-top-content {
@@ -591,6 +613,7 @@ input:checked + .slider:before {
   flex: 1;
 }
 
+/* Sign up form */
 .account-form h2 {
   font-weight: 700;
   font-size: 24px;
@@ -632,6 +655,8 @@ input:checked + .slider:before {
   margin-top: 20px;
 }
 
+/* Success content signup */
+
 .success-content {
   flex: 1;
 }
@@ -666,17 +691,49 @@ input:checked + .slider:before {
   margin: 40px 0 20px 0;
 }
 
+/* mobile hide and show */
+
 .mobile-off {
   display: block;
 }
 
-.desktop-off{
+.desktop-off {
   display: none;
 }
 
 @media (max-width: 320px) {
   .mobile-off {
     display: none;
+  }
+
+  .banner-image {
+    background: url(../image/mobile-background-image.svg);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .top-header {
+    padding: 30px 20px;
+  }
+
+  .poweredby {
+    margin-left: 45px;
+  }
+
+  .banner-content {
+    padding: 125px 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-header {
+    font-size: 32px;
+  }
+
+  .content-details {
+    font-size: 18px;
   }
 
   .job-list-container {
@@ -702,7 +759,7 @@ input:checked + .slider:before {
     flex-direction: column;
   }
 
-  .job-heading img {
+  .org-image {
     width: 80px;
   }
 
@@ -740,6 +797,10 @@ input:checked + .slider:before {
     margin: 5px 10px;
   }
 
+  .detail-icon {
+    width: 24px;
+  }
+
   .job-action {
     margin-top: 20px;
     flex-direction: unset;
@@ -747,7 +808,21 @@ input:checked + .slider:before {
     flex-wrap: wrap;
   }
 
-  .filter-container{
+  .apply-btn {
+    padding: 10px 40px;
+    margin-right: 5px;
+  }
+
+  .save-btn {
+    padding: 10px 40px;
+    margin-left: 5px;
+  }
+
+  .search-btn {
+    margin: 0 0 10px 0;
+  }
+
+  .filter-container {
     padding: 0;
     margin: 20px 0 0 0;
   }
@@ -766,11 +841,11 @@ input:checked + .slider:before {
     display: block;
   }
 
-  #popup3 .popup-action{
+  #popup3 .popup-action {
     margin-top: 0;
   }
 
-  .desktop-off{
+  .desktop-off {
     display: block;
   }
 }
@@ -780,6 +855,36 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .banner-image {
+    background: url(../image/mobile-background-image.svg);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .top-header {
+    padding: 30px 20px;
+  }
+
+  .poweredby {
+    margin-left: 45px;
+  }
+
+  .banner-content {
+    padding: 125px 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-header {
+    font-size: 32px;
+  }
+
+  .content-details {
+    font-size: 18px;
+  }
+
   .job-list-container {
     width: 100%;
     margin: 0;
@@ -803,7 +908,7 @@ input:checked + .slider:before {
     flex-direction: column;
   }
 
-  .job-heading img {
+  .org-image {
     width: 80px;
   }
 
@@ -841,6 +946,10 @@ input:checked + .slider:before {
     margin: 5px 10px;
   }
 
+  .detail-icon {
+    width: 24px;
+  }
+
   .job-action {
     margin-top: 20px;
     flex-direction: unset;
@@ -848,7 +957,21 @@ input:checked + .slider:before {
     flex-wrap: wrap;
   }
 
-  .filter-container{
+  .apply-btn {
+    padding: 10px 40px;
+    margin-right: 5px;
+  }
+
+  .save-btn {
+    padding: 10px 40px;
+    margin-left: 5px;
+  }
+
+  .search-btn {
+    margin: 0 0 10px 0;
+  }
+
+  .filter-container {
     padding: 0;
     margin: 20px 0 0 0;
   }
@@ -867,11 +990,11 @@ input:checked + .slider:before {
     display: block;
   }
 
-  #popup3 .popup-action{
+  #popup3 .popup-action {
     margin-top: 0;
   }
 
-  .desktop-off{
+  .desktop-off {
     display: block;
   }
 }
@@ -881,6 +1004,36 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .banner-image {
+    background: url(../image/mobile-background-image.svg);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .top-header {
+    padding: 30px 20px;
+  }
+
+  .poweredby {
+    margin-left: 45px;
+  }
+
+  .banner-content {
+    padding: 125px 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-header {
+    font-size: 32px;
+  }
+
+  .content-details {
+    font-size: 18px;
+  }
+
   .job-list-container {
     width: 100%;
     margin: 0;
@@ -904,7 +1057,7 @@ input:checked + .slider:before {
     flex-direction: column;
   }
 
-  .job-heading img {
+  .org-image {
     width: 80px;
   }
 
@@ -942,6 +1095,10 @@ input:checked + .slider:before {
     margin: 5px 10px;
   }
 
+  .detail-icon {
+    width: 24px;
+  }
+
   .job-action {
     margin-top: 20px;
     flex-direction: unset;
@@ -949,7 +1106,21 @@ input:checked + .slider:before {
     flex-wrap: wrap;
   }
 
-  .filter-container{
+  .apply-btn {
+    padding: 10px 40px;
+    margin-right: 5px;
+  }
+
+  .save-btn {
+    padding: 10px 40px;
+    margin-left: 5px;
+  }
+
+  .search-btn {
+    margin: 0 0 10px 0;
+  }
+
+  .filter-container {
     padding: 0;
     margin: 20px 0 0 0;
   }
@@ -968,11 +1139,11 @@ input:checked + .slider:before {
     display: block;
   }
 
-  #popup3 .popup-action{
+  #popup3 .popup-action {
     margin-top: 0;
   }
 
-  .desktop-off{
+  .desktop-off {
     display: block;
   }
 }
@@ -982,6 +1153,36 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .banner-image {
+    background: url(../image/mobile-background-image.svg);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .top-header {
+    padding: 30px 20px;
+  }
+
+  .poweredby {
+    margin-left: 45px;
+  }
+
+  .banner-content {
+    padding: 125px 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .content-header {
+    font-size: 32px;
+  }
+
+  .content-details {
+    font-size: 18px;
+  }
+
   .job-list-container {
     width: 100%;
     margin: 0;
@@ -1005,7 +1206,7 @@ input:checked + .slider:before {
     flex-direction: column;
   }
 
-  .job-heading img {
+  .org-image {
     width: 80px;
   }
 
@@ -1043,6 +1244,10 @@ input:checked + .slider:before {
     margin: 5px 10px;
   }
 
+  .detail-icon {
+    width: 24px;
+  }
+
   .job-action {
     margin-top: 20px;
     flex-direction: unset;
@@ -1050,7 +1255,21 @@ input:checked + .slider:before {
     flex-wrap: wrap;
   }
 
-  .filter-container{
+  .apply-btn {
+    padding: 10px 40px;
+    margin-right: 5px;
+  }
+
+  .save-btn {
+    padding: 10px 40px;
+    margin-left: 5px;
+  }
+
+  .search-btn {
+    margin: 0 0 10px 0;
+  }
+
+  .filter-container {
     padding: 0;
     margin: 20px 0 0 0;
   }
@@ -1069,11 +1288,11 @@ input:checked + .slider:before {
     display: block;
   }
 
-  #popup3 .popup-action{
+  #popup3 .popup-action {
     margin-top: 0;
   }
 
-  .desktop-off{
+  .desktop-off {
     display: block;
   }
 }
