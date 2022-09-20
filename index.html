@@ -178,6 +178,9 @@
               <button type="button" class="primary-btn search-btn">
                 Search
               </button>
+              <button type="button" class="secondary-btn search-btn desktop-off">
+                Filter
+              </button>
             </div>
           </div>
 
@@ -365,6 +368,18 @@
       <div class="popup">
         <div class="job-content popup-job-details">
           <div class="popup-top-content">
+            <div class="popup-job-action">
+              <img src="assets/image/export.svg" alt="export" width="32" />
+              <img src="assets/image/copy.svg" alt="copy" width="32" />
+              <img src="assets/image/facebook.svg" alt="facebook" width="32" />
+              <img src="assets/image/linkedin.svg" alt="linkedin" width="32" />
+              <img
+                src="assets/image/cancel.svg"
+                style="margin-left: 70px"
+                alt="cancel"
+                width="32"
+              />
+            </div>
             <div class="job-heading">
               <img src="assets/image/org-logo.svg" alt="" />
               <div class="job-header">
@@ -385,7 +400,7 @@
                 </div>
               </div>
             </div>
-            <div class="popup-job-action">
+            <div class="popup-job-action mobile-off">
               <img src="assets/image/export.svg" alt="export" width="32" />
               <img src="assets/image/copy.svg" alt="copy" width="32" />
               <img src="assets/image/facebook.svg" alt="facebook" width="32" />
@@ -521,10 +536,153 @@
               account when redirected to the dashboard!
             </h5>
           </div>
-          <div class="signup-banner">
+          <div class="signup-banner mobile-off">
             <img src="assets/image/signup-banner.svg" width="100%" alt="" />
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="popup3" class="overlay">
+      <div class="popup">
+            <div class="popup-job-action">
+              <img
+                src="assets/image/cancel.svg"
+                style="margin-left: 260px"
+                alt="cancel"
+                width="32"
+              />
+          </div>
+        <!-- <a class="close" href="#">&times;</a> -->
+        <div class="content">
+          <div class="filter-container">
+            <div class="filter-header">
+              <h1>Job Filter</h1>
+              <span>Clear All</span>
+            </div>
+  
+            <div class="filter-category">
+              <div class="filter-type-heading">
+                <h4>Experience Level</h4>
+                <span>Clear</span>
+              </div>
+              <div class="filter-selections">
+                <label class="container"
+                  >0-2 Years
+                  <input type="checkbox" checked="checked" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >3-4 Years
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >5-7 Years
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="filter-category">
+              <div class="filter-type-heading">
+                <h4>Contract Type</h4>
+                <span>Clear</span>
+              </div>
+              <div class="filter-selections">
+                <label class="container"
+                  >Internship
+                  <input type="checkbox" checked="checked" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >Contract job
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >Full Time
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="filter-category">
+              <div class="filter-type-heading">
+                <h4>Job Function</h4>
+                <span>Clear</span>
+              </div>
+              <div class="filter-selections">
+                <label class="container"
+                  >Writing
+                  <input type="checkbox" checked="checked" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >Accounting
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >Communications
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="filter-category">
+              <div class="filter-type-heading">
+                <h4>Location</h4>
+                <span>Clear</span>
+              </div>
+              <div class="filter-selections">
+                <label class="container"
+                  >Asia
+                  <input type="checkbox" checked="checked" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >North America
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <label class="container"
+                  >Australia
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+  
+                <h5>See more</h5>
+              </div>
+            </div>
+  
+            <div class="filter-category">
+              <div class="filter-type-heading">
+                <h4>Remote Work</h4>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-action">
+          <button type="button" class="primary-btn search-btn">Apply</button>
+        </div>
+      </div>
+
       </div>
     </div>
   </body>
