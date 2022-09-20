@@ -165,7 +165,6 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
   display: flex;
@@ -184,7 +183,6 @@ input:checked + .slider:before {
   border-radius: 15px;
   width: 70%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .popup h2 {
@@ -833,7 +831,6 @@ input:checked + .slider:before {
     border-radius: 15px;
     width: 90%;
     position: relative;
-    transition: all 5s ease-in-out;
     max-height: 90%;
     overflow: auto;
   }
@@ -982,7 +979,6 @@ input:checked + .slider:before {
     border-radius: 15px;
     width: 90%;
     position: relative;
-    transition: all 5s ease-in-out;
     max-height: 90%;
     overflow: auto;
   }
@@ -1131,7 +1127,6 @@ input:checked + .slider:before {
     border-radius: 15px;
     width: 90%;
     position: relative;
-    transition: all 5s ease-in-out;
     max-height: 90%;
     overflow: auto;
   }
@@ -1280,7 +1275,6 @@ input:checked + .slider:before {
     border-radius: 15px;
     width: 90%;
     position: relative;
-    transition: all 5s ease-in-out;
     max-height: 90%;
     overflow: auto;
   }
