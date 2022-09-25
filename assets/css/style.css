@@ -767,7 +767,7 @@ input:checked + .slider:before {
 
   .job-details {
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .job-highlights {
@@ -915,7 +915,7 @@ input:checked + .slider:before {
 
   .job-details {
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .job-highlights {
@@ -1063,7 +1063,7 @@ input:checked + .slider:before {
 
   .job-details {
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .job-highlights {
@@ -1211,7 +1211,7 @@ input:checked + .slider:before {
 
   .job-details {
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 
   .job-highlights {
